@@ -19,6 +19,7 @@ allPokemons.forEach(pokemon => {
     <img src="${pokemon.img}">
     <h1>${pokemon.name}</h1>
     <h1>${pokemon.type}</h1>
+    <h2>${pokemon.about}</h2>
     `     
     contenedor.appendChild(tarjetas);  
     
