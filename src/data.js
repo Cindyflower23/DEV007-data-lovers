@@ -13,4 +13,5 @@ export const filterDataByType= (data, condition) =>{
   console.log(pokemonesFiltrados)
   return pokemonesFiltrados;
   }
+
   

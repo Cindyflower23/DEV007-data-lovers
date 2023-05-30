@@ -502,7 +502,3 @@ const tarjetas=document.createElement("div")
 // filterData(data.pokemon, "water"))
 // console.log(btnWater)
 //filterData(data.pokemon, "water")
-
-
-
- 
