@@ -1,23 +1,26 @@
-import { example, anotherExample } from '../src/data.js';
+import {allPokemons} from "./main.js";
+import { filterDataByType, sortData } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterDataByType', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterDataByType).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `charmeleon` for fire', () => {
+    const pokemonesFire = filterDataByType(allPokemons, "fire");
+    const pokemonFuego= pokemonesFire.length
+    expect(pokemonFuego).toBe(22);
   });
 });
 
 
-describe('anotherExample', () => {
+describe('sortData', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortData ).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `sortData`', () => {
+    expect(sortData()).toBe('OMG');
   });
 });
