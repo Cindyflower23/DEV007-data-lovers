@@ -73,7 +73,7 @@ justify-content: center;
 
 
 
- .btn{
+.btn{
     background:linear-gradient(red 40%,black 40%,black 60%, white 60%);
     width: 100px;
     height: 100px;
@@ -84,7 +84,7 @@ justify-content: center;
     color:aliceblue;
  
 
- }
+}
 
 
 
