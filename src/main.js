@@ -96,7 +96,7 @@ btnFire.addEventListener("click", function (e) {
   contenedor.innerHTML = "";
   console.log(pokemonesFire);
   pokemonesFire.forEach((pokemon) => {
-    // console.log(pokemon);
+    console.log(pokemon);
     const tarjetas = document.createElement("div");
     tarjetas.classList.add("tarjetaPokemon");
     tarjetas.innerHTML = `
@@ -113,7 +113,7 @@ btnWater.addEventListener("click", function (e) {
   e.preventDefault();
   // e.stopPropagation();
   contenedor.innerHTML = "";
-
+  console.log(pokemonesWater);
   pokemonesWater.forEach((pokemon) => {
     console.log(pokemon);
     const tarjetas = document.createElement("div");
@@ -132,7 +132,7 @@ btnGrass.addEventListener("click", function (e) {
   e.preventDefault();
   // e.stopPropagation();
   contenedor.innerHTML = "";
-
+  console.log(pokemonesGrass);
   pokemonesGrass.forEach((pokemon) => {
     console.log(pokemon);
     const tarjetas = document.createElement("div");
@@ -151,7 +151,7 @@ btnElectric.addEventListener("click", function (e) {
   e.preventDefault();
   // e.stopPropagation();
   contenedor.innerHTML = "";
-
+  console.log(pokemonesElectric);
   pokemonesElectric.forEach((pokemon) => {
     console.log(pokemon);
     const tarjetas = document.createElement("div");
@@ -170,7 +170,7 @@ btnIce.addEventListener("click", function (e) {
   e.preventDefault();
   // e.stopPropagation();
   contenedor.innerHTML = "";
-
+  console.log(pokemonesIce);
   pokemonesIce.forEach((pokemon) => {
     console.log(pokemon);
     const tarjetas = document.createElement("div");
@@ -465,30 +465,12 @@ btnFairy.addEventListener("click", function (e) {
   });
 });
 
-// contenedor.innerHTML =  filterData(data.pokemon, "water")
-
-// contenedor.innerHTML=""
-// const btnWater =document.getElementById("water")
-// btnWater.addEventListener("click",function () {
-// contenedor.innerHTML =  filterData(data.pokemon, "water")
-//    })
-
-// //  contenedor.innerHTML =  filterData(data.pokemon, "water")
-//  })
-
-//  contenedor.innerHTML=""
-
-//
-// filterData(data.pokemon, "water"))
-// console.log(btnWater)
-//filterData(data.pokemon, "water")
-
 //Obtener el elemento Select del usuario
 const selectElement = document.getElementById("in1");
 //Escuchar el evento change del select
 selectElement.addEventListener("change", (event) => {
   const selectedOption = event.target.value;
-  console.log(selectedOption);
+  //console.log(selectedOption);
   const sortPokemons = sortData(allPokemons, selectedOption);
   //    ordenarAsc(selectedOption);
   contenedor.innerHTML = "";

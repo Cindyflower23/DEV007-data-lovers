@@ -10,7 +10,7 @@
 
 export const filterDataByType= (data, condition) =>{
   const pokemonesFiltrados= data.filter((pokemon) => pokemon.type.includes(condition));
-  console.log(pokemonesFiltrados)
+  //console.log(pokemonesFiltrados)
   return pokemonesFiltrados;
 }
 
