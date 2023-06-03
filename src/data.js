@@ -15,9 +15,10 @@ export const filterDataByType= (data, condition) =>{
 }
 
 export const sortData = (data, sortOrder) => {
-  const ordenarAsc = data.sort((a, b) => {
+  const ordenarAlf = data.sort((a, b) => {
     const name1 = a.name.toLowerCase()
     const name2 = b.name.toLowerCase()
+    console.log(sortOrder) 
     if (sortOrder === "asc") {
   
       if (name1 < name2) {
@@ -35,6 +36,8 @@ export const sortData = (data, sortOrder) => {
       }
     }
     return 0;
+    
   })
-  return ordenarAsc;
+  
+  return ordenarAlf;
 }

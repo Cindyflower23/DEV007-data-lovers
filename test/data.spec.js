@@ -1,6 +1,30 @@
 import data from "../src/data/pokemon/pokemon.js"
 import { filterDataByType, sortData } from '../src/data.js';
 
+const dataOrdenada=[ 
+  {name:'abra'},
+  {name:'aerodactyl'},
+  {name:'aipom'},
+  {name:'alakazam'},
+
+]
+
+const dataOrdenadaDesc=[ 
+  {name:'alakazam'},
+  {name:'aipom'},
+  {name:'aerodactyl'},
+  {name:'abra'}, 
+
+]
+
+const dataDesordenada=[ 
+  {name:'aerodactyl'},
+  {name:'abra'},
+  {name:'alakazam'},
+  {name:'aipom'},
+
+]
+
 
 describe('filterDataByType', () => {
   it('is a function', () => {
@@ -44,7 +68,13 @@ describe('sortData', () => {
     expect(typeof sortData ).toBe('function');
   });
 
-  it('returns `sortData`', () => {
-    expect(sortData()).toBe('OMG');
+
+  it("debería devolver los pokemones ordenados ascendentemente", () => {
+    expect(sortData(dataDesordenada,"asc")).toEqual(dataOrdenada);
+  });
+
+  it("debería devolver los pokemones ordenados desendentemente", () => {
+    expect(sortData(dataDesordenada,"desc")).toEqual(dataOrdenadaDesc);
   });
 });
+ 

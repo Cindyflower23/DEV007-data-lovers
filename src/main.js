@@ -472,6 +472,8 @@ selectElement.addEventListener("change", (event) => {
   const selectedOption = event.target.value;
   //console.log(selectedOption);
   const sortPokemons = sortData(allPokemons, selectedOption);
+  console.log(sortPokemons)
+  
   //    ordenarAsc(selectedOption);
   contenedor.innerHTML = "";
   sortPokemons.forEach((pokemon) => {
@@ -484,5 +486,9 @@ selectElement.addEventListener("change", (event) => {
     <h1>${pokemon.type}</h1>
     `;
     contenedor.appendChild(tarjetas);
+
+    
   });
+  
 });
+
