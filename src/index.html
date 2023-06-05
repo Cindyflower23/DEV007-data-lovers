@@ -7,21 +7,19 @@
   </head>
   <body>
     <div class="contenedor" id="contenedor">
-
       <div class="buscador" id="buscador">
         <img src="Daco_5394286.png" class="im2">
         <br>
         
-      <select class="in1" id="in1">
+        <select class="in1" id="in1">
         <option value="">Ordenar Alfabeticamente </option>
         <option value="asc"> A-Z </option>
         <option value="desc"> Z-A </option>
-      </select>
-
+        </select>
 
         <br> 
         
-        <button class="btn btn-header" id="ver-todos">Ver todos</button> 
+        <button class="btn btn-header" id="verTodos">Ver todos</button> 
         <button class="btn Normal" id="normal">Normal</button>
         <button class="btn Fire" id="fire">Fire</button>
         <button class="btn Water" id="water">Water</button>
@@ -40,11 +38,16 @@
         <button class="btn Dragon" id="dragon">Dragon</button>
         <button class="btn Steel" id="steel">Steel</button>
         <button class="btn Fairy" id="fairy">Fairy</button>
+
         <img src="Pokemon-Ash-PNG-HD.png" class="im1" >
         
       </div>
-      <div class="navegacion"></div>
-      <div class="targets" id="targets"> </div> 
+
+      <div class="navegacion">__</div>
+      <div class="flip" >
+        <div class="targets" id="targets"> </div>
+        <div class="targetsBack" id="targetsBack"> </div>
+      </div>
     </div>
     <script src="main.js" type="module"></script>
 

@@ -17,6 +17,20 @@ allPokemons.forEach((pokemon) => {
   contenedor.appendChild(tarjetas);
 });
 
+/*const contenedorBack=document.getElementById("targetsBack");
+allPokemons.forEach((pokemon)=> {
+  const tarjetasBack= document.createElement("div");
+  tarjetasBack.classList.add ("tarjetaPokemonBack")
+  tarjetasBack.innerHTML += `
+  <h1>${pokemon.about}</h1>
+  `;
+
+  contenedorBack.appendChild(tarjetasBack);
+})*/
+
+
+const btnTodos = document.getElementById("verTodos");
+
 const pokemonesNormal = filterDataByType(allPokemons, "normal");
 const btnNormal = document.getElementById("normal");
 
@@ -70,6 +84,25 @@ const btnSteel = document.getElementById("steel");
 
 const pokemonesFairy = filterDataByType(allPokemons, "fairy");
 const btnFairy = document.getElementById("fairy");
+
+btnTodos.addEventListener("click", function (e) {
+  e.preventDefault();
+  // e.stopPropagation();
+  contenedor.innerHTML = "";
+
+  allPokemons.forEach((pokemon) => {
+    console.log(pokemon);
+    const tarjetas = document.createElement("div");
+    tarjetas.classList.add("tarjetaPokemon");
+    tarjetas.innerHTML = `
+        <h1>${pokemon.num}</h1>
+        <img src="${pokemon.img}">
+        <h1>${pokemon.name}</h1>
+        <h1>${pokemon.type}</h1>
+        `;
+    contenedor.appendChild(tarjetas);
+  });
+});  
 
 btnNormal.addEventListener("click", function (e) {
   e.preventDefault();
